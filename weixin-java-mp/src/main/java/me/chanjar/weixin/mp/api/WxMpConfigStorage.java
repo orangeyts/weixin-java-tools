@@ -15,6 +15,12 @@ public interface WxMpConfigStorage {
 
   String getAccessToken();
 
+  /**
+   * TODO 自定义一个分布式锁
+   * @see http://ifeve.com/redis-lock/
+   * @see https://github.com/redisson/redisson
+   * @return
+   */
   Lock getAccessTokenLock();
 
   boolean isAccessTokenExpired();
